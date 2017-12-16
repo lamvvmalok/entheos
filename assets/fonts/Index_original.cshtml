@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "Productos Arbell";
+}
+@section head{
+    <script type="text/javascript" src="~/Scripts/inicio/inicio.js"></script>
+    }
+@Html.Action("BannersHome","Banners")
+<div class="cajaGrisHome">
+    
+        <div class="inicioIzquierda">
+            <div class="cajaProximosEventosHome">
+                <h1 class="DINNextLTPro">PROXIMOS EVENTO</h1>
+                <hr />
+                <div class="eventosHome">
+                    @Html.Action("EventosHome","Eventos")
+                </div>
+            </div>
+            <br />
+            <div class="cajaBellezaExteriorHome">
+                <h1 class="DINNextLTPro">BELLEZA EXTERIOR</h1>
+                <hr />
+                @Html.Action("NotasSemanalesHome","NotasSemanales")
+            </div>
+        </div>
+        <div class="inicioCentro">
+            <div class="cajaCapacitacionesHome">
+                <h1 class="DINNextLTPro">CAPACITACIONES</h1>
+                <span class="cajaCapacitacionesHomeCirculo"></span>
+                <hr />
+                <div class="capacitacionesHome DINNextLTPro">
+                    @Html.Action("CapacitacionesHome","Capacitacion")                    
+                </div>
+            </div>
+            <br />
+            <a href="~/sumate"><img src="~/images/banners/sumate.jpg" /></a>
+        </div>
+        <div class="inicioDerecha">
+            <div class="cajaDescuentosHome">
+                <a href="~/Ofertas">
+                <div class="cajaDescuentosHomeContenido">
+                    <div id="circulo" class="DINNextLTPro"><span>%</span></div>
+                    <h1 class="DINNextLTPro">DESCUENTOS!</h1>
+                </div></a>
+                
+            </div>
+            <div class="cajaNuevosProductosHome">
+                <h1 class="DINNextLTPro">NUEVOS PRODUCTOS!</h1>
+                <hr />
+                @Html.Action("CatalogoHome","Catalogos")
+                <div class="todosLosCatalogos">
+                    <a  href="~/Catalogos" class="DINNextLTPro">Todos los catálogos</a>
+                </div>
+            </div>
+        </div>
+  
+</div>
+
+
+

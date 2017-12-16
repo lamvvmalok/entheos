@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html lang="es-ar">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>@ViewBag.Title Distribuidora Entheos</title>
+    <link rel="shortcut icon" type="image/x-icon" href="~/images/favicon.ico">
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->    
+    @System.Web.Optimization.Styles.Render("~/content/bootstrapweb")
+    @System.Web.Optimization.Styles.Render("~/content/web")      
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    @System.Web.Optimization.Scripts.Render("~/bundles/cufon")
+</head>
+<body>
+    <div class="container">
+        <div class="bannerHome cufon">
+           @Html.Action("Logo","Inicio")
+            <div class="pull-right">
+                @Html.Action("TextosRotativos","Banners")
+            </div>
+        </div>
+        <div class="menu DINNextLTPro">
+            <ul id="menuTop">
+                <li><a href="~/Inicio">inicio</a></li>
+                <li>&nbsp;|</li>
+                <li id="menuEmpresa">
+                    <a href="javascript:void(0);">Empresa</a>
+                    <ul id="submenuEmpresa" class="hide">
+                        <li><a href="~/QuienesSomos">QUIENES SOMOS</a></li>
+                         <li><a href="~/Sumate">INCORPÓRATE </a></li>
+                         <li><a href="~/Contacto">CONTÁCTANOS</a></li>
+                     </ul>
+                </li>
+                <li>&nbsp;|</li>               
+                <li id="menuProductos">
+                    <a href="javascript:void(0);">Productos</a>
+                    <ul id="submenuProductos" class="hide">
+                        <li>@Html.ActionLink("Catálogos", "Index", "Catalogos")</li>
+                         <li><a href="~/Pedidos">Hacer Pedidos</a></li>
+                        <li>@Html.ActionLink("Mas Información","Categorias", "Capacitacion", new{ id=1, titulo="PRODUCTOS" }, null)</li>
+                     </ul>
+                </li>
+                <li>&nbsp;|</li>
+                <li><a href="~/Capacitacion">capacitación</a></li>
+                <li>&nbsp;|</li>
+                <li><a href="~/Sociales">sociales</a></li>
+                <li>&nbsp;|</li>
+                <li><a href="~/Eventos">eventos</a></li>
+            </ul> 
+        </div>
+        @RenderBody()
+        <br />
+        <div class="cajaContactoHome cufon"> 
+            <table style="width: 500px; margin:0 auto; ">
+                <tr>
+                    <td style="text-align:right; width:47px;">
+                        <img alt="" src="~/Content/images/icono_mail_contactoHome.jpg" />
+                    </td>
+                    <td style="text-align:left;">
+                        <a href="mailto:lolytessore@yahoo.com.ar">lolytessore@yahoo.com.ar</a>
+                        <br/>
+                        <a href="mailto:info@arbellentheos.com.ar">info@arbellentheos.com.ar</a>
+                    </td>
+                    <td style="text-align:right; width:47px;">
+                        <img alt="" src="~/Content/images/icono_tel_contactoHome.jpg"  />
+                    </td>
+                    <td style="text-align:left;">
+                         TEL/ (+54) 02324 - 42 55 74
+                        <br/>
+                        FAX/ (+54) 02324 - 43 36 01
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br />
+        <div class="cajaGrisFoot">
+            <div class="menuFoot DINNextLTPro">
+                <ul>
+                    <li><a href="~/Pedidos">Hacer Pedidos</a>&nbsp;|</li>
+                    <li>@Html.ActionLink("Notas Semanales", "Index", "NotasSemanales")&nbsp;|</li>
+                    <li>@Html.ActionLink("Efemérides", "Index", "Efemerides")&nbsp;|</li>
+                    <li>@Html.ActionLink("Descargas", "Index", "Descargas")</li>
+                </ul>
+            </div>
+            
+            <map name="socialmap" id="socialmap">
+                <area shape="rect" coords="28,47,120,74" href="http://twitter.com/LolyTessore" target="_blank" alt="twitter" title="twitter" />
+                <area shape="rect" coords="124,46,216,73" href="https://www.facebook.com/dolores.ahedodetessore" target="_blank" alt="facebook" title="facebook"  />
+            </map><img alt="" id="bannerRedesSociales" src="~/images/banners/bannerRedesSociales.jpg" usemap="socialmap"/>
+        </div>
+    </div>
+    @System.Web.Optimization.Scripts.Render("~/bundles/bootstrapweb")
+    @System.Web.Optimization.Scripts.Render("~/bundles/cycle")
+    @System.Web.Optimization.Scripts.Render("~/bundles/innerfade")
+    @RenderSection("head", false)
+    @System.Web.Optimization.Scripts.Render("~/bundles/web")
+    <script type="text/javascript">Cufon.now();</script>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36362203-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>
