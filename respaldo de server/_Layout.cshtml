@@ -1,0 +1,448 @@
+﻿
+
+    @{var request = HttpContext.Current.Request;}
+@{var price=50;}
+@if (@Url.Action("", null, null, "http") == "http://www.arbellentheos.com.ar/Inicio/Index")
+    {
+
+
+
+
+<!DOCTYPE html>
+<html lang="es-ar">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <title>@ViewBag.Title Distribuidora Entheos</title>
+    
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="http://www.arbellentheos.com.ar/assets/images/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="http://www.arbellentheos.com.ar/assets/images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="http://www.arbellentheos.com.ar/assets/images/favicon-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="http://www.arbellentheos.com.ar/assets/images/favicon-icon-114x114.png">
+    
+    <!-- Web Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://www.arbellentheos.com.ar/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Icon Fonts -->
+    <link href="http://www.arbellentheos.com.ar/assets/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- Plugins -->
+    <link href="http://www.arbellentheos.com.ar/assets/css/flexslider.css" rel="stylesheet">
+    
+    <!-- Template core CSS -->
+    <link href="http://www.arbellentheos.com.ar/assets/css/template.css" rel="stylesheet">
+
+</head>
+
+
+
+<body>
+
+     <!-- HEADER -->
+    <header class="header header-fixed header-transparent">
+        <div class="container">
+            <!-- YOUR LOGO HERE -->
+            <div class="inner-header">
+                <a class="inner-brand" href="index.html">
+                    <img class="brand-light icono-estil" src="http://www.arbellentheos.com.ar/assets/images/logo-dark.png" width="100" alt="">
+                    <img class="brand-dark icono-estil" src="http://www.arbellentheos.com.ar/assets/images/logo-dark.png" width="100" alt="">
+                </a>
+            </div>
+        
+            <!-- OPEN MOBILE MENU -->
+            <div class="main-nav-toggle">
+                <div class="nav-icon-toggle" data-toggle="collapse" data-target="#custom-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </div>
+            </div>
+        
+            <!-- WIDGETS MENU -->
+            <div class="inner-header pull-right">
+                <div class="menu-extras clearfix">
+        
+            
+        
+
+        
+                </div>
+            </div>
+        
+            <!-- MAIN MENU -->
+            <nav id="custom-collapse" class="main-nav collapse clearfix">
+                <ul class="inner-nav">
+                            <!-- HOME -->
+                    <li class="has-submenu">
+                        <a href="~/Inicio">Inicio</a>
+                    </li>
+                    <!-- END HOME -->
+        
+                    <!-- PAGES -->
+                    <li class="has-submenu">
+                        <a href="#">Empresa</a>
+                        <ul class="submenu">
+                            <li >
+                                <a href="~/QuienesSomos">Quienes somos</a>
+                            </li>
+        
+                            <li >
+                                <a href="~/Sumate">Incorp&oacute;rporate</a>
+                            </li>
+        
+                        </ul>
+                    </li>
+                    <!-- END PAGES -->
+        
+                    <!-- FEATURES -->
+                    <li class="has-submenu">
+                        <a href="#">Productos</a>
+                        <ul class="submenu">
+                            <li >
+                                <a href="~/Catalogos">Cat&aacute;lagos</a>
+                            </li>
+        
+                            <li >
+                                <a href="~/Pedidos">Hacer pedidos</a>
+                            </li>
+        
+                            <li >
+                                <a href="~/Capacitacion/Categorias/1/PRODUCTOS">Mas Informaci&oacute;n</a>
+                            </li>   
+                        </ul>
+                    </li>
+
+                    <!-- FEATURES -->
+                    <li class="has-submenu">
+                        <a href="#">Novedades</a>
+                        <ul class="submenu">
+                            <li >
+                                <a href="~/Capacitacion">Capacitaci&oacute;n</a>
+                            </li>
+        
+                            <li >
+                                <a href="~/Sociales">Sociales</a>
+                            </li>
+        
+                            <li >
+                                <a href="~/Eventos">Eventos</a>
+                            </li>         
+                            <li >
+                                <a href="#">Notas Semanales</a>
+                            </li>         
+                            <li >
+                                <a href="#">Descargas</a>
+                            </li>   
+                        </ul>
+                    </li>
+
+                    <li >
+                        <a href="~/Contacto">Contactanos</a>
+                    </li>
+                    <!-- END FEATURES -->
+        
+                    <!-- DIVIDER -->
+                    <li class="has-submenu">
+                                            <!-- SEARCH -->
+
+
+                    <div class="menu-item hidden-xxs" style="
+    padding-top: 33px;
+    padding-bottom: 26px;
+    ">
+                        <div class="extras-search">
+                            <a id="modal-search" href="#"><i class="fa fa-search" aria-hidden="true" style="color: #4c4646;"></i></a>
+                            <form action="#" class="header-search-form">
+                                <div class="search-form-inner">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="header-search-form-clouse">
+                                                    <a href="#" class="form-close-btn">✕</a>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12">
+                                                <input type="text" placeholder="Buscar">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- END SEARCH -->
+
+
+                    </li>
+
+
+        
+                </ul>
+
+
+            </nav>
+        
+        </div>
+    </header>
+    <!-- END HEADER -->
+ <!-- WRAPPER -->
+    <div class="wrapper">
+
+@RenderBody()
+
+
+
+
+        <!-- FOOTER -->
+        <footer class="footer">
+
+            
+                <div class="copyright">
+            
+                    <div class="row">
+            
+
+                        <div class="col-sm-12" style="margin-top: -3%;">
+                            <div class="text-center">
+                                <a href="#top" class="scroll-top"><i class="fa fa-angle-up fa-4" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-sm-12" style="margin-top: -3%;">
+                            <div class="text-center">
+                            <p class="m-0">
+                                Copyright <a href="#">2017 ARBELLENTHEOS</a>| Diseño y desarrollo <a href="http://www.wowestudio.com.ar">wow!</a>
+                            </p>
+                            </div>
+                        </div>
+                        <div class="col-sm-12" style="padding: 2%;margin-top: -2%;">
+                            <div class="text-center">
+                                <a href="#"><img src="http://www.arbellentheos.com.ar/assets/images/facebook-logo.svg" style="width: 25px;cursor: pointer;"/></a>
+                                <a href="#"><img src="http://www.arbellentheos.com.ar/assets/images/instagram.svg" style="width: 25px;margin-left: 2%;cursor: pointer;"/></a>
+                        
+                            </div>
+
+                        </div>
+                
+                    </div><!-- .row -->
+            
+                </div>
+            
+            
+        </footer>
+        <!-- END FOOTER -->
+
+    </div>
+    <!-- END WRAPPER -->
+
+    <!-- JAVASCRIPT FILES -->
+
+    <script src="http://www.arbellentheos.com.ar/assets/js/jquery-2.2.3.min.js"></script>
+    <script src="http://www.arbellentheos.com.ar/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="http://www.arbellentheos.com.ar/assets/js/plugins.min.js"></script>
+    <script src="http://www.arbellentheos.com.ar/assets/js/custom.min.js"></script> 
+    <script type="text/javascript" src="http://www.arbellentheos.com.ar/assets/js/jquery.parallax-1.1.3.js"></script>
+    <script type="text/javascript" src="http://www.arbellentheos.com.ar/assets/js/jquery.scrollTo-1.4.2-min.js"></script>
+
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            //$('#nav').localScroll(400);
+            $('#intro').parallax("80%", 0.1);
+            $('#second').parallax("80%", 0.1);
+            $('.bg').parallax("50%", 0.8);
+            $('#third').parallax("50%", 0.6);
+
+        })
+</script>
+
+    @RenderSection("head", false)
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+
+
+
+
+
+
+    }else
+    {
+
+
+
+
+ <!DOCTYPE html>
+<html lang="es-ar">
+
+<body>
+
+
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>@ViewBag.Title Distribuidora Entheos</title>
+    <link rel="shortcut icon" type="image/x-icon" href="~/images/favicon.ico">
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->    
+    @System.Web.Optimization.Styles.Render("~/content/bootstrapweb")
+    @System.Web.Optimization.Styles.Render("~/content/web")      
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    @System.Web.Optimization.Scripts.Render("~/bundles/cufon")
+
+</head>
+
+ <div class="container">
+        <div class="bannerHome cufon">
+           @Html.Action("Logo","Inicio")
+            <div class="pull-right">
+                @Html.Action("TextosRotativos","Banners")
+            </div>
+        </div>
+        <div class="menu DINNextLTPro">
+            <ul id="menuTop">
+                <li><a href="~/Inicio">inicio</a></li>
+                <li>&nbsp;|</li>
+                <li id="menuEmpresa">
+                    <a href="javascript:void(0);">Empresa</a>
+                    <ul id="submenuEmpresa" class="hide">
+                        <li><a href="~/QuienesSomos">QUIENES SOMOS</a></li>
+                         <li><a href="~/Sumate">INCORPÓRATE </a></li>
+                         <li><a href="~/Contacto">CONTÁCTANOS</a></li>
+                     </ul>
+                </li>
+                <li>&nbsp;|</li>               
+                <li id="menuProductos">
+                    <a href="javascript:void(0);">Productos</a>
+                    <ul id="submenuProductos" class="hide">
+                        <li>@Html.ActionLink("Catálogos", "Index", "Catalogos")</li>
+                         <li><a href="~/Pedidos">Hacer Pedidos</a></li>
+                        <li>@Html.ActionLink("Mas Información","Categorias", "Capacitacion", new{ id=1, titulo="PRODUCTOS" }, null)</li>
+                     </ul>
+                </li>
+                <li>&nbsp;|</li>
+                <li><a href="~/Capacitacion">capacitación</a></li>
+                <li>&nbsp;|</li>
+                <li><a href="~/Sociales">sociales</a></li>
+                <li>&nbsp;|</li>
+                <li><a href="~/Eventos">eventos</a></li>
+            </ul> 
+        </div>
+        @RenderBody()
+        <br />
+        <div class="cajaContactoHome cufon"> 
+            <table style="width: 500px; margin:0 auto; ">
+                <tr>
+                    <td style="text-align:right; width:47px;">
+                        <img alt="" src="~/Content/images/icono_mail_contactoHome.jpg" />
+                    </td>
+                    <td style="text-align:left;">
+                        <a href="mailto:lolytessore@yahoo.com.ar">lolytessore@yahoo.com.ar</a>
+                        <br/>
+                        <a href="mailto:info@arbellentheos.com.ar">info@arbellentheos.com.ar</a>
+                    </td>
+                    <td style="text-align:right; width:47px;">
+                        <img alt="" src="~/Content/images/icono_tel_contactoHome.jpg"  />
+                    </td>
+                    <td style="text-align:left;">
+                         TEL/ (+54) 02324 - 42 55 74
+                        <br/>
+                        FAX/ (+54) 02324 - 43 36 01
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br />
+        <div class="cajaGrisFoot">
+            <div class="menuFoot DINNextLTPro">
+                <ul>
+                    <li><a href="~/Pedidos">Hacer Pedidos</a>&nbsp;|</li>
+                    <li>@Html.ActionLink("Notas Semanales", "Index", "NotasSemanales")&nbsp;|</li>
+                    <li>@Html.ActionLink("Efemérides", "Index", "Efemerides")&nbsp;|</li>
+                    <li>@Html.ActionLink("Descargas", "Index", "Descargas")</li>
+                </ul>
+            </div>
+            
+            <map name="socialmap" id="socialmap">
+                <area shape="rect" coords="28,47,120,74" href="http://twitter.com/LolyTessore" target="_blank" alt="twitter" title="twitter" />
+                <area shape="rect" coords="124,46,216,73" href="https://www.facebook.com/dolores.ahedodetessore" target="_blank" alt="facebook" title="facebook"  />
+            </map><img alt="" id="bannerRedesSociales" src="~/images/banners/bannerRedesSociales.jpg" usemap="socialmap"/>
+        </div>
+    </div>
+    @System.Web.Optimization.Scripts.Render("~/bundles/bootstrapweb")
+    @System.Web.Optimization.Scripts.Render("~/bundles/cycle")
+    @System.Web.Optimization.Scripts.Render("~/bundles/innerfade")
+    @RenderSection("head", false)
+    @System.Web.Optimization.Scripts.Render("~/bundles/web")
+    <script type="text/javascript">Cufon.now();</script>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36362203-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+    }
+
+
+   
